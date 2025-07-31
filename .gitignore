@@ -8,9 +8,6 @@
 /storage/pail
 /vendor/*
 !/vendor/laravel/sail/runtimes/
-.env
-.env.backup
-.env.production
 .phpactor.json
 .phpunit.result.cache
 Homestead.json
