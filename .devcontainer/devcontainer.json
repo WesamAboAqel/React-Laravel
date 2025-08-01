@@ -1,35 +1,36 @@
 {
-	"name": "Laravel + React",
-	"dockerComposeFile": ["../docker-compose.yml"],
-	"service": "laravel.test",
-	"workspaceFolder": "/var/www/html",
-	"forwardPorts": [80, 5173, 3306],
-	"postCreateCommand": "cp .env.example .env && composer install && php artisan key:generate && npm install && npm run dev",
-	"remoteUser": "sail",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"version": "18"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"bmewburn.vscode-intelephense-client",
-				"amiralizadeh9480.laravel-extra-intellisense",
-				"ryannaddy.laravel-artisan",
-				"onecentlin.laravel5-snippets",
-				"onecentlin.laravel-blade",
-				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint",
-				"mikestead.dotenv"
-			],
-			"settings": {
-				"editor.defaultFormatter": "esbenp.prettier-vscode",
-				"editor.formatOnSave": true,
-				"php.executablePath": "/usr/local/bin/php",
-				"php.validate.executablePath": "/usr/local/bin/php",
-				"intelephense.php.executablePath": "/usr/local/bin/php"
-			}
-		}
-	}
+    "name": "Laravel + React",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "laravel.test",
+    "workspaceFolder": "/var/www/html",
+    "forwardPorts": [80, 5173, 3306],
+    "postCreateCommand": "cp .env.example .env && composer install && php artisan key:generate && npm install && npm run dev &",
+    "remoteUser": "sail",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "ryannaddy.laravel-artisan",
+                "onecentlin.laravel5-snippets",
+                "onecentlin.laravel-blade",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "mikestead.dotenv"
+            ],
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true,
+                "php.executablePath": "/usr/local/bin/php",
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "intelephense.php.executablePath": "/usr/local/bin/php"
+            }
+        }
+    }
 }
