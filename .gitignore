@@ -4,6 +4,7 @@
 /vendor/*
 !/vendor/laravel/sail/runtimes/8.4/
 !/vendor/laravel/sail/database/mysql/
+!/vendor/bin/
 /node_modules
 /public/build
 /public/hot
